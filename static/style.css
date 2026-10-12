@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: Arial, sans-serif; color: #172033;
+  background: linear-gradient(135deg, #eef4ff, #f7f9fc); min-height: 100vh;
+}
+.container { width: min(900px, 92%); margin: 0 auto; padding: 42px 0; }
+.eyebrow { color: #315fd4; font-size: .78rem; letter-spacing: .14em; font-weight: 700; }
+h1 { margin: 8px 0 12px; font-size: clamp(2rem, 5vw, 3rem); }
+.intro { color: #526078; line-height: 1.6; max-width: 700px; }
+.panel {
+  background: white; border: 1px solid #dce4f0; border-radius: 16px;
+  padding: 24px; margin-top: 22px; box-shadow: 0 8px 28px #20345b0d;
+}
+label { display: block; font-weight: 700; margin-bottom: 10px; }
+.controls { display: flex; gap: 10px; }
+input {
+  flex: 1; min-width: 0; border: 1px solid #bac6d9; border-radius: 9px;
+  padding: 12px; font-size: 1rem;
+}
+button {
+  border: 0; border-radius: 9px; padding: 12px 18px; background: #315fd4;
+  color: white; font-weight: 700; cursor: pointer;
+}
+button:disabled { opacity: .6; cursor: wait; }
+.status { color: #526078; margin-bottom: 0; }
+.success { color: #167443; font-weight: 700; }
+.error { color: #b42318; font-weight: 700; }
+.result { margin-top: 18px; padding: 16px; border-radius: 10px; background: #eefaf3; overflow-wrap: anywhere; }
+.result h2, .architecture h2 { margin-top: 0; font-size: 1.2rem; }
+.architecture li { line-height: 1.6; margin: 10px 0; }
+footer { color: #6a7589; font-size: .88rem; margin: 24px 2px; }
+@media (max-width: 600px) {
+  .container { padding: 26px 0; }
+  .panel { padding: 18px; }
+  .controls { flex-direction: column; }
+  button { width: 100%; }
+}

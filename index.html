@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Client-Server Demo</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <main class="container">
+    <p class="eyebrow">LOCALHOST ASSESSMENT</p>
+    <h1>Client-Server Communication</h1>
+    <p class="intro">Enter a message. The browser client sends it to the local server, which returns a response.</p>
+    <section class="panel">
+      <label for="message">Message to server</label>
+      <div class="controls">
+        <input id="message" type="text" placeholder="e.g. Hello server!" maxlength="250">
+        <button id="send">Send message</button>
+      </div>
+      <p id="status" class="status" role="status">Waiting for your message.</p>
+      <div id="result" class="result" hidden>
+        <h2>Server response</h2>
+        <p><strong>Received:</strong> <span id="received"></span></p>
+        <p><strong>Reply:</strong> <span id="reply"></span></p>
+        <p><strong>Status:</strong> <span id="serverStatus"></span></p>
+      </div>
+    </section>
+    <section class="panel architecture">
+      <h2>Layered architecture</h2>
+      <ol>
+        <li><strong>Presentation layer:</strong> HTML and CSS display the form and response.</li>
+        <li><strong>Client layer:</strong> JavaScript validates input and sends an HTTP POST request with JSON.</li>
+        <li><strong>Server layer:</strong> Python receives the request, validates it, and creates a JSON response.</li>
+        <li><strong>Transport/network layer:</strong> HTTP over TCP/IP carries data through localhost (127.0.0.1).</li>
+      </ol>
+    </section>
+    <footer>Runs locally on this computer. No external service or database required.</footer>
+  </main>
+  <script src="static/app.js"></script>
+</body>
+</html>
